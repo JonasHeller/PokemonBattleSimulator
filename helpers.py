@@ -85,14 +85,11 @@ def simulate(attPoke, defPoke):
 
     # query database for strengths/weaknesses
     attEff = {'Strong': queryType(attPoke, defPoke, 'StrongTo'), 'Weak': queryType(attPoke, defPoke, 'WeakTo'), 'Stats': queryStats(attPoke, defPoke)[0]}
-    print(attEff)
     defEff = {'Strong': queryType(defPoke, attPoke, 'StrongTo'), 'Weak': queryType(defPoke, attPoke, 'WeakTo'), 'Stats': queryStats(defPoke, attPoke)[0]}
-    print(defEff)
     # return unique strengths/weaknesses
     asl = len(flatten(attEff, 'Strong'))
     dsl = len(flatten(defEff, 'Strong'))
-    print(asl)
-    print(dsl)
+
     # cancel out two types
     for x in attEff['Strong'].keys():
         if x in attEff['Weak'].keys():
@@ -100,9 +97,6 @@ def simulate(attPoke, defPoke):
     for x in defEff['Strong'].keys():
         if x in defEff['Weak'].keys():
             dsl -= 1
-
-    print(asl)
-    print(dsl)
 
     # decide result by type advantage,
     if asl < dsl and asl != -1 and dsl != -1:
