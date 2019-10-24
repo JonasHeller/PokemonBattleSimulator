@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='static/text/css'>
+	<link rel="stylesheet" href="static/css/bootstrap.css">
+	<link rel="stylesheet" href="static/css/style.css">
+	</head>
+
+	<body ng-app="myApp">
+	<div class="box-wrap">
+		<header role="banner" id="fh5co-header">
+			<div class="container">
+				<nav class="navbar navbar-default">
+					<div class="row">
+						<div class="col-xs-3">
+							<div class="fh5co-navbar-brand">
+								<a class="fh5co-logo" href="index">Pokémon Battle simulator</a>
+							</div>
+						</div>
+						<div class="col-md-9 main-nav">
+							<ul class="nav text-right">
+								<li class="active"><a href="index"><span>Battle!</span></a></li>
+								<li><a href="Info">Info</a></li>
+								
+							</ul>
+						</div>
+					</div>
+				</nav>
+		  	</div>
+        </header>
+        <div id="fh5co-section" class="text-center">
+                <div class="container">
+                    <div class="row">
+								<div class="col-md-5">
+									<p></p>
+									<a href={{link1}}>
+									<div class="item"><img src={{image}} alt="image" height="400" width="400"></a></div>
+									</a>
+								</div>
+								<div class="col-md-5 ">
+									<p></p>
+									<a href={{link2}}>
+										<div class="item"><img src={{image2}} alt="image" height="400" width="400"></a></div>
+									</a>
+								</div>
+					</div>
+				</div>
+				<p class="animate-box">{{tekst}}</p>
+				<p class="animate-box">Click on the Pokémon for more information!</p>
+						
+				<audio autoplay
+					controls
+					src={{sound}}>
+						Your browser does not support the
+						<code>audio</code> element
+				</audio>
+				<audio autoplay
+					controls
+					src={{sound2}}>
+						Your browser does not support the
+						<code>audio</code> element
+				</audio>
+				<p></p>
+				<div>
+						<button onclick="window.location.href='index'">Try again!</button>
+				</div>
+	
+			</div>
+		</div>
+	</body>
+</html>
+
